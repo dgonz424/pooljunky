@@ -5,45 +5,68 @@ var express = require("express");
 var router = express.Router();
 
 
-
+//homepage redirects to user login page
 router.get("/", function (req, res) {
-  res.redirect("/burgers");
+  res.redirect("/login");
 });
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/burgers", function(req, res) {
-db.burgers.findAll().then(function(dbBurgers) {
-      var hbsObject = {burger: dbBurgers};
-      return res.render("index", hbsObject);
+// routes need to be set up with correct database/table etc 5/6/17
+
+//customer login page
+router.get("/login", function(req, res) {
+.findAll().then(function(dbBurgers) {
+      
+      return res.render();
     });
 });
 
-router.post("/burgers/create", function(req, res) {
-  db.burgers.create({
-    burger_name: req.body.burger_name
-  }).then(function(dbBurgers) {
-    res.redirect("/");
-  });
+//saves customer info/redirects to services
+router.post("/login", function(req, res) {
+.findAll().then(function(dbBurgers) {
+   
+    res.redirect("/services");
+    });
 });
 
-router.put("/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
-
-  console.log("condition", condition);
-
-  db.Burgers.update({
-    devoured: req.body.devoured
-  }, condition, function() {
-    res.redirect("/");
-  });
+//services available 
+router.get("/services", function(req, res) {
+.findAll().then(function(dbBurgers) {
+      
+      return res.render();
+    });
 });
 
-router.delete("/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+//saves services user chooses, redirects to providers
+router.post("/services", function(req, res) {
+.findAll().then(function(dbBurgers) {
+   
+    res.redirect("/providers");
+    });
+});
 
-  db.Burgers.destroy(condition, function() {
-    res.redirect("/");
-  });
+//provider availability 
+router.get("/providers", function(req, res) {
+.findAll().then(function(dbBurgers) {
+      
+      return res.render();
+    });
+});
+
+//user selects provider
+router.post("/providers", function(req, res) {
+.findAll().then(function(dbBurgers) {
+   
+    res.redirect("/confirmation");
+    });
+});
+
+//confirmation page/ js sends confirmation email to user with booking info
+router.get("/confirmation", function(req, res) {
+.findAll().then(function(dbBurgers) {
+      
+      return res.render();
+    });
 });
 
 // Export routes for server.js to use.
