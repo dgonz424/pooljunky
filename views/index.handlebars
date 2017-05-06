@@ -1,56 +1,38 @@
-<h1>burgers!</h1>
+<div class"login-nav">
+<div class"nav-email">
+<input type="text" class="form-control" placeholder="Email">
+</div>
+<div class="nav-password">
+<input type="text" class="form-control" placeholder="Password">
+<div class="sign-in-btn">
+<button type="button" class="btn btn-default navbar-btn">Sign in</button>
+</div>
+</div>
+</div>
 
-<h2>burgers that are not devoured!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless this.devoured}}
-      <li>
-        {{this.burger_name}}
-
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
-          <button type="submit">DEVOUR TIME!</button>
-        </form>
-
-        {{> burgers/delete-burger}}
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if this.devoured}}
-      <li>
-        {{this.burger_name}}
-
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="false">
-          <button type="submit">DEVOUR!</button>
-        </form>
-
-        {{> burgers/delete-burger}}
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-update-form" action="/" method="POST">
-
-  <div class="form-group">
-    <label for="ca">burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
+<div id="registration_forms" class="login-box">
+  <div class="full_form_header">
+  <h1><span>Login</span>&nbsp<span>to</span>&nbsp<span>Buoy</span></h1>
   </div>
 
+  <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
-    <label for="bur">devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> devoured!<br>
-    <input type="radio" name="devoured" value="0"> not devoured
+  <div class="input-name">
+    <input type="text" class="form-control" placeholder="Frist and last name">
+    </div>
+    <div class="input-email">
+    <input type="text" class="form-control" placeholder="Email">
+    </div>
+    <div class="input-password">
+    <input type="text" class="form-control" placeholder="Password">
+    </div>
+    <div class="sign-up-btn">
+    <button type="button" class="btn btn-default navbar-btn">Sign up</button>
+    </div>
   </div>
+  </div>
+  </form>
 
-  <button type="submit">Add burger</button>
-</form>
+</div>
+

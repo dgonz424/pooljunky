@@ -1,19 +1,78 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+body {
+
+	background-image: url('../images/weather.png')
 }
 
-.label {
-  font-weight: bold;
+
+
+h1{
+
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 40px;
+	left: 200px;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+
+.nav-email {
+    position: relative;
+}  
+
+.nav-password{
+	position: relative;
 }
 
-.form-group {
-  margin-bottom: 5px;
+.sign-in-btn{
+	position: relative;
+	float: right;
+}
+.login-box{
+   
+    background-color: black;
+	width:  33%;
+	position: relative;
+	left:  400px;
+	padding-bottom: 80px;
+	top: 110px;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 200px; 
+    height: 100px; 
+    opacity: 0.3;
+}  
+
+
+.full_form_header{
+
+font-size: 100%;
+position: relative;
+bottom: 180px;
+right: 110px;
+color: white;
+font-weight: bolder;
+width: 100px;
+}
+
+.input-name{
+ position: relative;
+ right: 95px;
+ bottom: 105px;
+}
+
+.input-email{
+ position: relative;
+ right: 95px;
+ bottom: 100px;
+}
+
+.input-password{
+ position: relative;
+ right: 95px;
+ bottom: 90px;
+}
+
+.sign-up-btn{
+ position: relative;
+ right: 45px;
+ bottom: 50px;
+
 }
