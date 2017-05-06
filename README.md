@@ -1,1 +1,5 @@
 # pooljunky
+Uber for pool servicing.
+Team Junky. Andrew, Daniel, Frank. All team members will chip in to the front and back end, but the following are their strengths. Frank is more creative, so he’ll specialize in the front end but he’s also knowledgeable in GitHub management. Andrew will specialize with APIs given his experience with the first group project. Daniel will specialize in databases.
+The homepage will just be a log in page. After logging in, there’ll be a redirect to a list of pool servicers with their availability and ratings (cost will be a flat rate just like Uber to stick to the KISS principle). We’ll try to implement payments through some sort of API. Bookings will process through the app with a percentage going to us. These may be lofty goals but we’ll try.
+Users are homeowners with pools who can’t or won’t maintain them, and/or possibly aren’t happy with their current pool servicer. Just as Uber simplifies and streamlines transportation, our app will make it so users can pay a fair flat fee and find a pool guy who won’t put too much chlorine (or AJAX) or only be available before the lawn is done (leaving a dirty pool again). 
